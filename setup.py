@@ -17,7 +17,7 @@ setup(
     author_email="arihantsingla21@gmail.com",
     description= "python packages for text summarization",
     long_description=long_description,
-    long_description_content="text/markdown",
+    long_description_content="text/markdown",   
     url=f"http://github.com/{AUTHOR}/{REPO_NAME}",
     project_urls={
         "Bug Tracker":"http://github.com/{AUTHOR}/{REPO_NAME}/issues"
