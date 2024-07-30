@@ -1,7 +1,7 @@
 from src.Text_summarizer.constants import *
 from src.Text_summarizer.utils.common import create_directories,read_yaml
 from src.Text_summarizer.logging import logging 
-from src.Text_summarizer.entity import data_ingestionConfig,data_validation_config
+from src.Text_summarizer.entity import data_ingestionConfig,data_validation_config,DataTransformationConfig
 
 
 class ConfigurationManager:
@@ -41,6 +41,19 @@ class ConfigurationManager:
         )    
         
         return data_validation_configuration
+    
+        
+    def get_data_transformation_config(self) -> DataTransformationConfig:
+        config = self.config.data_transformation
+        
+        create_directories([config.root_dir])
+        
+        data_transformation_configuration = DataTransformationConfig(
+            root_dir = config.root_dir,
+            data_path= config.data_path,
+            tokenizer_name=config.tokenizer_name
+        )    
+        return data_transformation_configuration
             
         
         

@@ -3,6 +3,7 @@ from pathlib import Path
 import logging 
 import os 
 from datetime import datetime 
+from src.Text_summarizer.utils.common import get_size
 
 
 
@@ -29,7 +30,8 @@ list_of_files=[
     "Dockerfile",
     "requirements.txt",
     "setup.py",
-    "research/trails.ipynb"
+    "research/trails.ipynb",
+    
 ]
 
 for filepath in list_of_files:

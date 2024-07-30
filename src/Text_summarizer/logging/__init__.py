@@ -13,7 +13,7 @@ LOG_FILE_PATH= os.path.join(log_path,LOG_FILE) ## this creates the log file path
 logging.basicConfig(
     handlers=[
         logging.FileHandler(LOG_FILE_PATH),
-        logging.StreamHandler(sys.stdout)
+        logging.StreamHandler(sys.stdout)## for displaying it in the terminal 
         ],##where to save the log files         
     format="[ %(asctime)s ] %(lineno)d %(name)s - %(levelname)s - %(message)s",
     level=logging.INFO
@@ -21,4 +21,3 @@ logging.basicConfig(
 
 if __name__=="__main__":
     logging.info("logging has started ")
-    logging.getLogger("logging started differently")
